@@ -36,6 +36,7 @@ while start > end:
     try:
         while count < 80:
             file_name = this_path + str(start) + '-' + str(count) + ".txt"
+            print(file_name)
             if os.path.isfile(file_name):
                 continue
             headerd = ("User-Agent",
@@ -53,7 +54,7 @@ while start > end:
             html_end = '/' + str(count)
             if count == 1 or count == 0:
                 html_end = ''
-            print("https://www.mzitu.com/" + str(start) + html_end)
+            # print("https://www.mzitu.com/" + str(start) + html_end)
             file = opener.open("https://www.mzitu.com/" + str(start) + html_end)
             # file_name = this_path + str(start) + '-' + str(count) + ".txt"
             
